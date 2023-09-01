@@ -1,6 +1,8 @@
 import './globals.css'
 import { Open_Sans } from 'next/font/google'
 
+import { FilterProvider } from '@/providers/FilterProvider'
+
 import AppHeader from '@/components/AppHeader'
 import AppContent from '@/components/AppContent'
 
@@ -16,9 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <body className={ font.className }>
         <AppHeader />
-        <AppContent>
-          {children}
-        </AppContent>
+        <FilterProvider>
+          <AppContent>
+            {children}
+          </AppContent>
+        </FilterProvider>
       </body>
     </html>
   )

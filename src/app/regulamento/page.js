@@ -16,8 +16,8 @@ const options = {
   },
 };
 
-export default async function Exams() {
-  const page = await getPage('2rwFTLuqKthg3JEn5b4VCv')
+export default async function Home() {
+  const page = await getPage('3NtHoHsCS41OKsrR4DCqUp')
 
   return (
     <main>

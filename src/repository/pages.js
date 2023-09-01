@@ -5,6 +5,4 @@ const client = contentful.createClient({
   accessToken: process.env.CONTENTFUL_DELIVERY_KEY
 })
 
-export default () => client.getEntries({
-  content_type: 'profissionais'
-})
+export default (id) => client.getEntry(id)

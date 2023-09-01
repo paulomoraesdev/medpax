@@ -1,17 +1,17 @@
-import FilterGrid from '@/components/profissionais/FilterGrid'
+import getProfessionals from '@/repository/professionals'
 
-export default function Home() {
+import FilterGrid from '@/components/profissionais/FilterGrid'
+import ProfessionalWrapper from '@/components/profissionais/ProfessionalWrapper'
+
+export default async function Page() {
+  const professionals = await getProfessionals()
+
   return (
-    <section className="grid grid-cols-2 gap-1 grid-rows-2">
-      <header className="col-span-2">
+    <section className="grid grid-cols-1 gap-1">
+      <header>
         <FilterGrid />
       </header>
-      <main className="mt-6">
-        especialistas
-      </main>
-      <aside className="mt-6 ml-4">
-        map
-      </aside>
+      <ProfessionalWrapper professionals={ professionals.items ?? [] } />
     </section>
   )
 }
