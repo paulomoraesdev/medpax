@@ -19,7 +19,7 @@ export default function ProfessionalCard({ professional, specialties }) {
         { 
           professional.specialties.length > 0 &&
           <div className="flex gap-4">
-            { professional.specialties.map((specialty, index) => (<div className="badge badge-ghost" key={ index }>{specialty.fields.title}</div>)) }
+            { professional.specialties.map((specialty, index) => (<div className="badge badge-ghost" key={ index }>{specialty.fields?.title}</div>)) }
           </div>
         }
         <div className="divider"></div>

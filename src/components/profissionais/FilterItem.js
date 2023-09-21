@@ -11,7 +11,7 @@ export default function FilterItem({ handleClick, active = false, content, varia
     >
       { content.icon }
       <p className="text-xs ml-2">
-        { content.title }
+        { content?.title }
       </p>
     </FilterButton>
   )
