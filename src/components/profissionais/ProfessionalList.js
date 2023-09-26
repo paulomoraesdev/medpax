@@ -10,7 +10,7 @@ export default function ProfessionalList({ list }) {
   const filteredProfessionals = filters.length > 0 ?
     list.filter(professional => 
       professional.fields.specialties.length > 0 && 
-      professional.fields.specialties?.find(specialty => filters.includes(specialty.fields.key))
+      professional.fields.specialties?.find(specialty => filters.includes(specialty.fields?.key) ?? false)
     ) : list
 
   return (
