@@ -16,6 +16,11 @@ export default function SignupButton() {
       })
   }
 
+  const handleClose = () => {
+    const el = document.querySelector('#signup-modal')
+    el.checked = false
+  }
+
   return (
     <>
       <label className="btn btn-outline btn-info btn-sm" htmlFor="signup-modal">
@@ -57,6 +62,9 @@ export default function SignupButton() {
             </label>
           </div>
           <div className="modal-action">
+            <button className="btn btn-ghost modal-close" type="reset" onClick={handleClose}>
+              Cancelar
+            </button>
             <button className="btn btn-success">Cadastrar</button>
           </div>
         </form>
