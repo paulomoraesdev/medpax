@@ -18,16 +18,29 @@ import {
   IconDental,
   IconMoodHappy,
   IconPill,
-  IconMessageCircle2
+  IconMessageCircle2,
+  IconFriends,
+  IconJumpRope,
+  IconLemon
 } from '@tabler/icons-react'
 
 const ICON_SIZE = 18
 
 export default [
   {
+    key: 'cabeca-tronco',
+    title: 'Cabeça e Tronco',
+    icon: <IconFriends size={ ICON_SIZE } />
+  },
+  {
     key: 'cardiologia',
     title: 'Cardiologistas',
     icon: <IconHeartbeat size={ ICON_SIZE } />
+  },
+  {
+    key: 'cardiovascular',
+    title: 'Cardiovasculares',
+    icon: <IconJumpRope size={ ICON_SIZE } />
   },
   {
     key: 'clinica-geral',
@@ -40,6 +53,11 @@ export default [
     icon: <IconBandage size={ ICON_SIZE } />
   },
   {
+    key: 'endocrinologia',
+    title: 'Endocrinologistas',
+    icon: <IconPill size={ ICON_SIZE } />
+  },
+  {
     key: 'fisioterapia',
     title: 'Fisioterapeutas',
     icon: <IconPhysotherapist size={ ICON_SIZE } />
@@ -50,9 +68,19 @@ export default [
     icon: <IconMessageCircle2 size={ ICON_SIZE } />
   },
   {
+    key: 'gastroenterologia',
+    title: 'Gastroenterologia',
+    icon: <IconLemon size={ ICON_SIZE } />
+  },
+  {
     key: 'ginecologia',
     title: 'Ginecologistas',
     icon: <IconVenus size={ ICON_SIZE } />
+  },
+  {
+    key: 'hematologia',
+    title: 'Hematologistas',
+    icon: <IconDroplet size={ ICON_SIZE } />
   },
   {
     key: 'infectologia',
