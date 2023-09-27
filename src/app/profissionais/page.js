@@ -3,6 +3,8 @@ import getProfessionals from '@/repository/professionals'
 import FilterGrid from '@/components/profissionais/FilterGrid'
 import ProfessionalWrapper from '@/components/profissionais/ProfessionalWrapper'
 
+export const revalidate = 60
+
 export default async function Page() {
   const professionals = await getProfessionals()
 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 60
 export default function Home() {
   return (
     <div className="hero p-20">

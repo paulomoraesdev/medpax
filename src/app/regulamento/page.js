@@ -16,6 +16,8 @@ const options = {
   },
 };
 
+export const revalidate = 60
+
 export default async function Home() {
   const page = await getPage('3NtHoHsCS41OKsrR4DCqUp')
 

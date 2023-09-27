@@ -16,6 +16,8 @@ const options = {
   },
 };
 
+export const revalidate = 60
+
 export default async function Exams() {
   const page = await getPage('2rwFTLuqKthg3JEn5b4VCv')
 
