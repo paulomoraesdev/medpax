@@ -6,10 +6,20 @@ import { ProfessionalContext } from '@/providers/ProfessionalProvider'
 export default function ProfessionalCard({ professional, specialties }) {
   const { currentProfessional, setCurrentProfessional } = useContext(ProfessionalContext)
 
-  // const handleClick = () => {
-  //   if (currentProfessional && currentProfessional.name === professional.name) return;
-  //   return setCurrentProfessional(professional);
-  // }
+  const btn = () => {
+    if (professional.linkkiwim) return {
+      url: professional.linkkiwim,
+      label: `Agendar online`
+    }
+    else if (professional.whatsapp) return {
+      url: `https://wa.me/55${professional.whatsapp}?text=Olá,%20estou%20pelo%20site%20da%20Medpax%20e%20gostaria%20de%20agendar%20um%20horário`,
+      label: `WhatsApp do profissional`
+    }
+    else return {
+      url: `https://wa.me/5514996767312?text=Olá,%20estou%20pelo%20site%20da%20Medpax%20e%20gostaria%20de%20agendar%20um%20horário%20com%20${professional.name}`,
+      label: `Solicitar agendamento`
+    }
+  }
 
   return (
 
@@ -43,11 +53,11 @@ export default function ProfessionalCard({ professional, specialties }) {
             </p>
           }
           <a 
-            href={ `https://wa.me/5514996767312?text=Olá,%20estou%20pelo%20site%20da%20Medpax%20e%20gostaria%20de%20agendar%20um%20horário%20com%20${professional.name}` } 
+            href={ btn().url } 
             target="_blank"
             className="btn btn-outline btn-success btn-xs"
           >
-            Solicitar Agendamento
+            { btn().label }
           </a>
         </div>
       </div>

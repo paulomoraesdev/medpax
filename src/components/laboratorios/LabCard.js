@@ -19,7 +19,6 @@ const options = {
 export default function LabCard({ lab, index }) {
   const showModal = () => {
     const el = document.querySelector(`#modal-${ index }`)
-    console.log(el)
     el && el.showModal()
   }
 

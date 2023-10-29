@@ -1,18 +1,36 @@
-import Image from "next/image";
 import Link from "next/link";
+import {
+  IconBuildingHospital,
+  IconStethoscope,
+  IconUser
+} from '@tabler/icons-react'
+import AppSlider from "@/components/AppSlider";
 
 export const revalidate = 60
 export default function Home() {
   return (
-    <div className="hero p-20">
-      <div className="hero-content flex-col lg:flex-row">
-        <Image src="/hero-image.jpg" width={ 300 } height={ 600 } alt="Medpax"/>
-        <div>
-          <h1 className="text-5xl font-bold">Um descontão pro seu bolso!</h1>
-          <p className="py-6">Preços e descontos especiais para consultas médicas e exames.</p>
-          <Link className="btn btn-primary" href="/regulamento">
-            Consulte o regulamento
-          </Link>
+    <div className="py-5 h-full">
+      <div className="grid grid-cols-1 gap-5">
+        <AppSlider />
+        <div className="grid grid-cols-3 gap-3">
+          <div className="card p-10 bg-gray-100 shadow-lg flex items-center flex-col">
+            <IconStethoscope size={ 48 } />
+            <div className="card-actions justify-center my-5">
+              <Link href="/profissionais" className="btn btn-primary btn-outline">Médicos</Link>
+            </div>
+          </div>
+          <div className="card p-10 bg-gray-100 shadow-lg flex items-center flex-col">
+            <IconBuildingHospital size={ 48 } />
+            <div className="card-actions justify-center my-5">
+              <Link href="/laboratorios" className="btn btn-primary btn-outline">Laboratórios</Link>
+            </div>
+          </div>
+          <div className="card p-10 bg-gray-100 shadow-lg flex items-center flex-col">
+            <IconUser size={ 48 } />
+            <div className="card-actions justify-center my-5">
+              <Link href="/parceiros" className="btn btn-primary btn-outline">Parceiros</Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
