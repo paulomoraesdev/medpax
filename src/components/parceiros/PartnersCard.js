@@ -41,13 +41,13 @@ export default function PartnersCard({ partner, index, notClickable = false }) {
           <div className='flex flex-col justify-center flex-grow'>
             <h2 className="card-title">{ partner.name }</h2>
             {
-              partner.detalhes?.content?.length > 0 &&
-              <>
+              notClickable && partner.detalhes?.content?.length > 0 &&
+              <div>
                 <div className="divider"></div>
-                <p className="text-sm font-medium text-gray-600">
+                <div className="text-sm font-medium text-gray-600">
                   { partner?.detalhes?.content && documentToReactComponents(partner.detalhes) }
-                </p>
-              </>
+                </div>
+              </div>
             }
             <div className="divider"></div>
             {
