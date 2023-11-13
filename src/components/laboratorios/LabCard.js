@@ -2,6 +2,8 @@
 
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Link from 'next/link';
+import { IconBrandWhatsapp, IconEye, IconWorldShare } from '@tabler/icons-react';
 
 const Bold = ({ children }) => <span className="bold">{children}</span>;
 
@@ -16,7 +18,7 @@ const options = {
   },
 };
 
-export default function LabCard({ lab, index }) {
+export default function LabCard({ lab, index, notClickable = false }) {
   const showModal = () => {
     const el = document.querySelector(`#modal-${ index }`)
     el && el.showModal()
@@ -41,18 +43,40 @@ export default function LabCard({ lab, index }) {
         }
         <div className="card-actions justify-end mt-4 items-center">
           {
-            lab.detalhes &&
-            <button className="btn btn-outline btn-info btn-xs" onClick={ showModal }>
+            !notClickable && lab.assinante &&
+            <Link 
+              className="btn btn-outline btn-circle btn-sm"
+              href={ `/laboratorios/${ index }` }
+            >
+              <IconEye size={ 16 } />
+            </Link>
+          }
+          {
+            lab.website &&
+            <Link 
+              target='_blank'
+              className="btn btn-outline btn-info btn-circle btn-sm"
+              href={ lab.website }
+            >
+              <IconWorldShare size={ 16 } />
+            </Link>
+          }
+          {
+            lab.whatsapp &&
+            <Link 
+              target='_blank'
+              className="btn btn-outline btn-success btn-circle btn-sm"
+              href={ `https://wa.me/55${lab.whatsapp}` }
+            >
+              <IconBrandWhatsapp size={ 16 } />
+            </Link>
+          }
+          {
+            notClickable && lab.detalhes &&
+            <button className="btn btn-outline btn-info btn-sm" onClick={ showModal }>
               Exames Disponíveis
             </button>
           }
-          <a 
-            href={ `https://wa.me/5514996767312?text=Olá,%20estou%20pelo%20site%20da%20Medpax%20e%20gostaria%20de%20verificar%20os%20valores%20de%20${lab.name}` } 
-            target="_blank"
-            className="btn btn-outline btn-success btn-xs"
-          >
-            Solicitar Valores
-          </a>
         </div>
         {
           lab.detalhes?.content?.length > 0 &&

@@ -1,11 +1,11 @@
 'use client'
 
+import { IconEye } from '@tabler/icons-react'
 import { useContext } from 'react'
 import { ProfessionalContext } from '@/providers/ProfessionalProvider'
+import Link from 'next/link'
 
-export default function ProfessionalCard({ professional, specialties }) {
-  const { currentProfessional, setCurrentProfessional } = useContext(ProfessionalContext)
-
+export default function ProfessionalCard({ professional, index, notClickable = false }) {
   const btn = () => {
     if (professional.linkkiwim) return {
       url: professional.linkkiwim,
@@ -22,9 +22,8 @@ export default function ProfessionalCard({ professional, specialties }) {
   }
 
   return (
-
-    <div className="card w-full bg-base-100 shadow-xl">
-      <div className="card-body justify-between">
+    <div index={ index }>
+      <div className="card-body justify-between shadow-lg">
         <h2 className="card-title">{ professional.name }</h2>
         { 
           professional.specialties?.length > 0 &&
@@ -51,6 +50,15 @@ export default function ProfessionalCard({ professional, specialties }) {
             <p className="text-sm font-medium text-gray-400">
               { professional.amount.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) ?? ' ' }
             </p>
+          }
+          {
+            !notClickable && professional.assinante &&
+            <Link 
+              className="btn btn-outline btn-success btn-xs"
+              href={ `/profissionais/${ index }` }
+            >
+              <IconEye />
+            </Link>
           }
           <a 
             href={ btn().url } 

@@ -19,6 +19,7 @@ export default function ProfessionalList({ list }) {
         filteredProfessionals.map((professional, index) => (
           <ProfessionalCard 
             key={ index }
+            index={ professional.sys.id }
             professional={ professional.fields }
             specialties={ professional.fields.specialties?.map(specialty => specialty.fields)}
           />

@@ -8,8 +8,8 @@ export default function PartinersList({ list }) {
       { 
         list.map((partner, index) => (
           <PartnersCard 
-            key={ index }
-            index={ index + 1 }
+            key={ partner.sys.id }
+            index={ partner.sys.id }
             partner={ partner.fields }
           />
         ))
