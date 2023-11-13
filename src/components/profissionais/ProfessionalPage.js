@@ -5,12 +5,13 @@ import AppGallery from '../AppGallery'
 import { useState } from 'react'
 import { IconHome } from '@tabler/icons-react'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 export default function ProfessionalPage({ professional }) {
   const [loaded, setLoaded] = useState(false)
 
   const testAssinatura = () => new Promise((resolve) => {
-    if (!professional.assinante) window.location.href = '/profissionais'
+    if (!professional.assinante) redirect('/profissionais')
     else resolve()
   })
 

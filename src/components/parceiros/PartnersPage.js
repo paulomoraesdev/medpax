@@ -5,12 +5,13 @@ import AppGallery from '../AppGallery'
 import { useState } from 'react'
 import Link from 'next/link'
 import { IconHome } from '@tabler/icons-react'
+import { redirect } from 'next/navigation'
 
 export default function PartnersPage({ partner }) {
   const [loaded, setLoaded] = useState(false)
 
   const testAssinatura = () => new Promise((resolve) => {
-    if (!partner.assinante) window.location.href = '/parceiros'
+    if (!partner.assinante) redirect('/parceiros')
     else resolve()
   })
 

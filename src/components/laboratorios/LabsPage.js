@@ -5,12 +5,13 @@ import AppGallery from '../AppGallery'
 import { useState } from 'react'
 import { IconHome } from '@tabler/icons-react'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 export default function LabsPage({ lab }) {
   const [loaded, setLoaded] = useState(false)
 
   const testAssinatura = () => new Promise((resolve) => {
-    if (!lab.assinante) window.location.href = '/laboratorios'
+    if (!lab.assinante) redirect('/laboratorios')
     else resolve()
   })
 
