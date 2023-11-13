@@ -16,6 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
+      <head>
+        <link rel="icon" href="/logo.svg" sizes="any" />
+      </head>
       <body className={ font.className }>
         <AppHeader />
         <FilterProvider>
