@@ -2,5 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '@splidejs/react-splide/css';
-@import '@splidejs/react-splide/css/sea-green';
+@import "@splidejs/react-splide/css";
+@import "@splidejs/react-splide/css/sea-green";
+
+.slider {
+  margin: 0 !important;
+  padding: 0 !important;
+}

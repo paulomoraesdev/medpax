@@ -1,43 +1,46 @@
-'use client'
+"use client";
 
-import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function AppSlider() {
   return (
-    <Splide 
-      aria-label="Destaques" 
+    <Splide
+      className="slider"
+      aria-label="Destaques"
       options={{
         interval: 5000,
         autoplay: true,
+        padding: "0px",
         pauseOnHover: true,
-        rewind: true
+        rewind: true,
       }}
     >
       <SplideSlide>
         <Link href="/profissionais">
-          <Image src="/slider/maisde100.webp" width={ 1366 } height={ 350 } />
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="/slider/maisde100.webp"
+            />
+            <source
+              media="(max-width: 768px)"
+              srcset="/slider/maisde100_m.png"
+            />
+            <Image src="/slider/maisde100.webp" width={1366} height={350} />
+          </picture>
         </Link>
-      </SplideSlide>
-      <SplideSlide>
-        <Link href="/regulamento">
-          <Image src="/slider/desconto.webp" width={ 1366 } height={ 350 } />
-        </Link>
-      </SplideSlide>
-      <SplideSlide>
-        <Image src="/slider/secuidar.webp" width={ 1366 } height={ 350 } />
       </SplideSlide>
       <SplideSlide>
         <Link href="/para-empresas">
-          <Image src="/slider/anuncie.webp" width={ 1366 } height={ 350 } />
+          <picture>
+            <source media="(min-width: 768px)" srcset="/slider/anuncie.webp" />
+            <source media="(max-width: 768px)" srcset="/slider/anuncie_m.png" />
+            <Image src="/slider/anuncie.webp" width={1366} height={350} />
+          </picture>
         </Link>
       </SplideSlide>
     </Splide>
-  )
+  );
 }
-
-
-
-
-
