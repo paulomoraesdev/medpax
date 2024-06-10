@@ -17,7 +17,7 @@ export default function AppSlider() {
         rewind: true,
       }}
     >
-      <SplideSlide>
+      {/* <SplideSlide>
         <Link href="/profissionais">
           <picture>
             <source
@@ -31,7 +31,7 @@ export default function AppSlider() {
             <Image src="/slider/maisde100.webp" width={1366} height={350} />
           </picture>
         </Link>
-      </SplideSlide>
+      </SplideSlide> */}
       <SplideSlide>
         <Link href="/para-empresas">
           <picture>
