@@ -17,26 +17,26 @@ export default function AppSlider() {
         rewind: true,
       }}
     >
-      {/* <SplideSlide>
+      <SplideSlide>
         <Link href="/profissionais">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/slider/maisde100.webp"
+              srcSet="/slider/maisde100.webp"
             />
             <source
               media="(max-width: 768px)"
-              srcset="/slider/maisde100_m.png"
+              srcSet="/slider/maisde100_m.png"
             />
             <Image src="/slider/maisde100.webp" width={1366} height={350} />
           </picture>
         </Link>
-      </SplideSlide> */}
+      </SplideSlide>
       <SplideSlide>
         <Link href="/para-empresas">
           <picture>
-            <source media="(min-width: 768px)" srcset="/slider/anuncie.webp" />
-            <source media="(max-width: 768px)" srcset="/slider/anuncie_m.png" />
+            <source media="(min-width: 768px)" srcSet="/slider/anuncie.webp" />
+            <source media="(max-width: 768px)" srcSet="/slider/anuncie_m.png" />
             <Image src="/slider/anuncie.webp" width={1366} height={350} />
           </picture>
         </Link>

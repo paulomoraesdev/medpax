@@ -1,17 +1,18 @@
-import './globals.css'
-import { Open_Sans } from 'next/font/google'
+import "./globals.css";
+import { Open_Sans } from "next/font/google";
 
-import { FilterProvider } from '@/providers/FilterProvider'
+import { FilterProvider } from "@/providers/FilterProvider";
+import { LabFilterProvider } from "@/providers/LabFilterProvider";
 
-import AppHeader from '@/components/AppHeader'
-import AppContent from '@/components/AppContent'
+import AppHeader from "@/components/AppHeader";
+import AppContent from "@/components/AppContent";
 
-const font = Open_Sans({ subsets: ['latin'] })
+const font = Open_Sans({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Medpax',
-  description: 'Exames e Médicos com desconto, para Ourinhos e região.',
-}
+  title: "Medpax",
+  description: "Exames e Médicos com desconto, para Ourinhos e região.",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -19,14 +20,14 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/logo.svg" sizes="any" />
       </head>
-      <body className={ font.className }>
+      <body className={font.className}>
         <AppHeader />
         <FilterProvider>
-          <AppContent>
-            {children}
-          </AppContent>
+          <LabFilterProvider>
+            <AppContent>{children}</AppContent>
+          </LabFilterProvider>
         </FilterProvider>
       </body>
     </html>
-  )
+  );
 }
