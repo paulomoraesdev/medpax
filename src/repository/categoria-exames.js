@@ -44,6 +44,26 @@ export default [
     title: "Doppler",
   },
   {
+    key: "tomografia-computadorizada",
+    title: "Tomografia Computadorizada",
+  },
+  {
+    key: "densitometria-ossea",
+    title: "Densitometria Óssea",
+  },
+  {
+    key: "radiografia-panoramica",
+    title: "Radiografia Panorâmica",
+  },
+  {
+    key: "exames-oftalmologicos",
+    title: "Exames Oftalmológicos",
+  },
+  {
+    key: "ultrassom-com-doppler-3d-4d",
+    title: "Ultrassom com Doppler 3D/4D",
+  },
+  {
     key: "eletrocardiograma",
     title: "Eletrocardiograma",
   },

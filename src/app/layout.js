@@ -5,6 +5,7 @@ import { FilterProvider } from "@/providers/FilterProvider";
 import { LabFilterProvider } from "@/providers/LabFilterProvider";
 
 import AppHeader from "@/components/AppHeader";
+import AppWhastapp from "@/components/AppWhastapp";
 import AppContent from "@/components/AppContent";
 
 const font = Open_Sans({ subsets: ["latin"] });
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={font.className}>
         <AppHeader />
+        <AppWhastapp />
         <FilterProvider>
           <LabFilterProvider>
             <AppContent>{children}</AppContent>

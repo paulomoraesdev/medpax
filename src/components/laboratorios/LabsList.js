@@ -16,7 +16,7 @@ export default function LabsList({ list }) {
               (categorias) => filters.includes(categorias.fields?.key) ?? false,
             ),
         )
-      : list;
+      : [];
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-7">

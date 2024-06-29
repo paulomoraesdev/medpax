@@ -29,9 +29,15 @@ export default function AppMenu() {
       </Link>
       <Link
         href="/para-empresas"
-        className="font-medium text-gray-500 hover:text-gray-900"
+        className="mr-5 font-medium text-gray-500 hover:text-gray-900"
       >
         Para Empresas
+      </Link>
+      <Link
+        href="/planos"
+        className="font-medium text-gray-500 hover:text-gray-900"
+      >
+        Planos
       </Link>
     </nav>
   );

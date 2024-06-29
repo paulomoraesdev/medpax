@@ -18,17 +18,27 @@ export default function AppSlider() {
       }}
     >
       <SplideSlide>
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcSet="/slider/saudeprioridade.png"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcSet="/slider/saudeprioridade_m.png"
+          />
+          <Image src="/slider/saudeprioridade.png" width={1366} height={350} />
+        </picture>
+      </SplideSlide>
+      <SplideSlide>
         <Link href="/profissionais">
           <picture>
-            <source
-              media="(min-width: 768px)"
-              srcSet="/slider/maisde100.webp"
-            />
+            <source media="(min-width: 768px)" srcSet="/slider/maisde100.png" />
             <source
               media="(max-width: 768px)"
               srcSet="/slider/maisde100_m.png"
             />
-            <Image src="/slider/maisde100.webp" width={1366} height={350} />
+            <Image src="/slider/maisde100.png" width={1366} height={350} />
           </picture>
         </Link>
       </SplideSlide>

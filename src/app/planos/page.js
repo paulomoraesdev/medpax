@@ -2,8 +2,6 @@ import getPage from "@/repository/pages";
 
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Link from "next/link";
-import PartnersForm from "@/components/parceiros/PartnersForm";
 
 const Bold = ({ children }) => <span className="bold">{children}</span>;
 
@@ -20,16 +18,12 @@ const options = {
 
 export const revalidate = 60;
 
-export default async function Companies() {
-  const page = await getPage("4qQj5QI3ZQD1SnEWEut3ch");
+export default async function Home() {
+  const page = await getPage("1dGqcmZDfwUktCv2w2fxUn");
 
   return (
     <main>
-      <>
-        {page.fields?.content && documentToReactComponents(page.fields.content)}
-        <hr className="my-5" />
-        <PartnersForm />
-      </>
+      {page.fields?.content && documentToReactComponents(page.fields.content)}
     </main>
   );
 }
