@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 
 import { FilterProvider } from "@/providers/FilterProvider";
 import { LabFilterProvider } from "@/providers/LabFilterProvider";
+import { CompanyFilterProvider } from "@/providers/CompanyFilterProvider";
 
 import AppHeader from "@/components/AppHeader";
 import AppWhastapp from "@/components/AppWhastapp";
@@ -26,7 +27,9 @@ export default function RootLayout({ children }) {
         <AppWhastapp />
         <FilterProvider>
           <LabFilterProvider>
-            <AppContent>{children}</AppContent>
+            <CompanyFilterProvider>
+              <AppContent>{children}</AppContent>
+            </CompanyFilterProvider>
           </LabFilterProvider>
         </FilterProvider>
       </body>
