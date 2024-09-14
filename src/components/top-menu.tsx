@@ -11,7 +11,7 @@ function MenuItem({ href, title }: { href: string, title: string }) {
   return (
     <NavigationMenuItem>
       <NavigationMenuLink asChild>
-        <Link className="hover:text-lime-600" href={ href } title={ title }>
+        <Link className="text-xs md:text-md hover:text-lime-600" href={ href } title={ title }>
           { title }
         </Link>
       </NavigationMenuLink>

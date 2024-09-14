@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body>
         <section className="">
-          <header className="container mx-auto flex items-center justify-between py-5">
+          <header className="container mx-auto flex flex-wrap items-center justify-center md:justify-between gap-y-5 py-5">
             <Link className="w-44" href="/">
               <Logo />
             </Link>

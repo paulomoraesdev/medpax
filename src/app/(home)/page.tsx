@@ -15,7 +15,7 @@ export default function Home() {
         </div>
       </section>
       <section className="container mx-auto -mt-5">
-        <div className="grid grid-cols-3 gap-10 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
           <Link href="/profissionais" title="Profissionais">
             <WobbleCard>
               <h2 className="font-bold text-lg">Médicos</h2>
