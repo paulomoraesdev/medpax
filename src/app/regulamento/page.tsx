@@ -20,7 +20,7 @@ const options = {
 export const revalidate = 60
 
 export default async function RegulamentoPage() {
-  const page = await getPage('3NtHoHsCS41OKsrR4DCqUp');
+  const page: any = await getPage('3NtHoHsCS41OKsrR4DCqUp');
 
   return (
     <div className="container mx:auto mt-5">
