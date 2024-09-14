@@ -8,8 +8,8 @@ export default [
     title: "Calçados",
   },
   {
-    key: "cosmesticos",
-    title: "Cosmésticos",
+    key: "cosmeticos",
+    title: "Cosméticos",
   },
   {
     key: "fotografia",
