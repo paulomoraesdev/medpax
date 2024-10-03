@@ -132,7 +132,7 @@ export function ExpandableCardDemo({ cards }: { cards: any }) {
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-60 w-full  rounded-lg object-cover object-top"
+                  className="w-full  rounded-lg object-cover object-top"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
