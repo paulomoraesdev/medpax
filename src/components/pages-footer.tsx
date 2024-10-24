@@ -14,7 +14,7 @@ export default function PagesFooter() {
                   </svg>
                   <div className="ml-6">
                       <p className="text-base font-medium text-black/50">Telefone:</p>
-                      <p className="mt-4 text-xl font-medium text-gray-900">(14) 99676-7312</p>
+                      <p className="text-md font-medium text-gray-900">(14) 99676-7312</p>
                   </div>
               </div>
 
@@ -24,7 +24,7 @@ export default function PagesFooter() {
                   </svg>
                   <div className="ml-6">
                       <p className="text-base font-medium text-black/50">Email:</p>
-                      <p className="mt-4 text-xl font-medium text-gray-900">planomedpax@gmail.com</p>
+                      <p className="text-md font-medium text-gray-900">planomedpax@gmail.com</p>
                   </div>
               </div>
 
@@ -35,7 +35,7 @@ export default function PagesFooter() {
                   </svg>
                   <div className="ml-6">
                       <p className="text-base font-medium text-black/50">Endereço:</p>
-                      <p className="mt-4 text-xl font-medium leading-relaxed text-gray-900">Rua Miguel Vita, 57, Vila Moraes. Ourinhos/SP</p>
+                      <p className="text-md font-medium leading-relaxed text-gray-900">Rua Miguel Vita, 57, Vila Moraes. Ourinhos/SP</p>
                   </div>
               </div>
           </div>
