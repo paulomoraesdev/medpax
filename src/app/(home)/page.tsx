@@ -2,6 +2,7 @@ import React from "react";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import HomeCall from "@/components/home-call";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -41,8 +42,18 @@ export default function Home() {
             </WobbleCard>
           </Link>
         </div>
-        <HomeCall />
       </section>
+      {/* <section className="container mx-auto my-5">
+        <Link href="#" target="_blank">
+          <Image
+            src="https://http2.mlstatic.com/D_NQ_759934-MLA80205441349_102024-OO.webp"
+            alt="Promoções"
+            width={1200}
+            height={500}
+          />
+        </Link>
+      </section> */}
+      <HomeCall />
     </React.Fragment>
   );
 }
