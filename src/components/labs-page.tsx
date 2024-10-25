@@ -15,9 +15,7 @@ import {
 import { PlusIcon } from 'lucide-react';
 
 export default function LabsPage({ lab }: { lab: any }) {
-
   const gallery = () => {
-    console.log(lab)
     if (!lab.galeria?.length) return null;
 
     const items = lab.galeria.map((item: any) => {
