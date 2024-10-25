@@ -38,10 +38,10 @@ export default function ProfessionalCard({ professional, identifier }: { profess
             </p>
           )
         }
-        <footer className="flex items-center justify-between mt-4">
+        <footer className="flex items-center flex-wrap justify-between mt-4 gap-2">
           {
             professional.amount && (
-              <p className="text-xl font-black text-gray-800">
+              <p className="text-xl font-black text-gray-800 w-full">
                 { professional.amount.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
               </p>
             )
