@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -7,21 +8,37 @@ export default function PartnersCard({ partner, identifier }: { partner: any, id
 				<div className="flex justify-start item-center gap-1">
           { partner.categoria?.map((categoria: any, index: any) => (<div className="bg-gray-200 px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block" key={ index }>{categoria.fields?.nome}</div>)) }
 				</div>
-				<h3 className="font-black text-gray-800 md:text-lg text-xl my-5">{ partner.name }</h3>
-        {
-          partner.localizacao && (
-            <p>
-              <strong>Endereço:</strong> { partner.localizacao }
-            </p>
-          )
-        }
-        {
-          partner.phone && (
-            <p>
-              <strong>Telefone:</strong> { partner.phone }
-            </p>
-          )
-        }
+				<div className="flex gap-2 items-start my-5">
+				  {
+						partner.logotipo && (
+						  <div className="">
+								<Image
+                  src={ `https:${partner.logotipo.fields.file.url}` }
+                  alt={ partner.logotipo.fields.title }
+                  width={ 100 }
+                  height={ 100 }
+                />
+							</div>
+						)
+					}
+				  <div className="flex-grow">
+    				<h3 className="font-black text-gray-800 md:text-lg text-xl">{ partner.name }</h3>
+            {
+              partner.localizacao && (
+                <p>
+                  <strong>Endereço:</strong> { partner.localizacao }
+                </p>
+              )
+            }
+            {
+              partner.phone && (
+                <p>
+                  <strong>Telefone:</strong> { partner.phone }
+                </p>
+              )
+            }
+				  </div>
+				</div>
         <footer className="flex items-center justify-end gap-2 mt-4">
           {
             partner.website && (
