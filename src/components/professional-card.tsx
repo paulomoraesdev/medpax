@@ -56,6 +56,15 @@ export default function ProfessionalCard({ professional, identifier }: { profess
             )
           }
           {
+            professional.midiasocial && (
+              <button onClick={ (ev) => { ev.preventDefault(); ev.stopPropagation(); window.open(professional.midiasocial); } }>
+                <p className="px-4 py-2 bg-teal-700 hover:bg-teal-900 text-white text-sm font-medium rounded-md transition-all duration-300">
+                  { btn().label }
+                </p>
+              </button>
+            )
+          }
+          {
             professional.assinante && (
               <Link href={ `/profissionais/${ identifier }` }>
                 <p className="px-4 py-2 bg-teal-700 hover:bg-teal-900 text-white text-sm font-medium rounded-md transition-all duration-300">
