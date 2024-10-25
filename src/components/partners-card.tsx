@@ -11,7 +11,7 @@ export default function PartnersCard({ partner, identifier }: { partner: any, id
 				<div className="flex gap-2 items-start my-5">
 				  {
 						partner.logotipo && (
-						  <div className="">
+						  <div className="w-20">
 								<Image
                   src={ `https:${partner.logotipo.fields.file.url}` }
                   alt={ partner.logotipo.fields.title }
